@@ -1,6 +1,5 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
-
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -13,7 +12,7 @@ import java.util.List;
 public class Employer extends AbstractEntity {
 
     @NotNull
-    @Size(min= 3, max = 50)
+    @Size(min= 3, max = 30)
     private String location;
 
     @OneToMany
@@ -22,6 +21,11 @@ public class Employer extends AbstractEntity {
 
     public Employer() {}
 
+    public Employer(String location) {
+        super();
+        this.location = location;
+    }
+
     public String getLocation() {
         return location;
     }
@@ -29,6 +33,4 @@ public class Employer extends AbstractEntity {
     public void setLocation(String location) {
         this.location = location;
     }
-
 }
-
