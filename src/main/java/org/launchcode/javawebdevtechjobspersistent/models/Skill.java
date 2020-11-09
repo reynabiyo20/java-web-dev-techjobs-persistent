@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 public class Skill extends AbstractEntity {
-    @NotBlank(message="Please add skill description")
+    @NotBlank(message= "Please add skill description")
     private String description;
 
     @ManyToMany(mappedBy = "skills")
